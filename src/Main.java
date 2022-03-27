@@ -25,6 +25,7 @@
 *       dfs(w)*/
 
 public class Main {
+    static int count = 0;
 
     /*main()
     * Params: String[] args
@@ -42,6 +43,10 @@ public class Main {
     *  in the order they're encountered
     * Special: Method is recursive*/
     public static void dfs() {
+        count += 1;
+        for (int i = 0; i < ; i++) {
+            
+        }
 
     }
 
