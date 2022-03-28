@@ -78,11 +78,12 @@ public class Main {
 
 			}
 		}
-		System.out.println(visited);
 		for (int j = 0; j < graf[0].length; j++) {
+			if (visitedArray[j] == 0) {
+				visited = visited + vertArray[index];
+			}
 			if (visitedArray[j] == 0 && graf[index][j] == 1) {
 				visited = dfs(vertArray[j], graf, vertArray, visitedArray, visited);
-				visited = visited + vertArray[index];
 			}
 		}
 
