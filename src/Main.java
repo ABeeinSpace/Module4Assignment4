@@ -13,6 +13,7 @@
 * for each vertex in V do
 *   if v is marked with 0
 *       dfs(v)
+* print the order in which vertices are visited.
 *
 * dfs(v)
 * Visits recursively all the unvisited vertices connected to vertex v by a path and numbers them in the order they
@@ -34,6 +35,14 @@ public class Main {
     * Special: main() is called by java at runtime and only exits on program exit*/
     public static void main(String[] args) {
 
+        char[] vertArray = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
+        String[] edgeArray = {"ab", "ac", "ad", "bc", "bd", "cd", "de", "eh", "ef", "hg", "hf", "fg"};
+        byte[][] graf = generateGraph(vertArray, edgeArray);
+
+        for (int i = 0; i < graf.length; i++) {
+            
+        }
+
     }
 
     /*dfs()
@@ -42,12 +51,27 @@ public class Main {
     * Description: Recursively visits all unvisited vertices connected to a vertex v by a valid path and numbers them
     *  in the order they're encountered
     * Special: Method is recursive*/
-    public static void dfs() {
+    public static void dfs(byte[][] graf, char[] vertArray, String[] edgeArray) {
         count += 1;
-        for (int i = 0; i < ; i++) {
-            
+        for (String edge : edgeArray) {
+
         }
 
+    }
+
+    /*generateGraph()
+     * Parameters: char[] vertices, String[] edges
+     * Returns: btye[][]
+     * Description: Generate us a graph*/
+    public static byte[][] generateGraph(char[] vertices, String[] edges){
+        byte[][] graph = new byte[vertices.length][vertices.length];
+        for(String edge : edges){
+            int sourceIndex = Character.getNumericValue(edge.charAt(0)) - 10;
+            int destIndex = Character.getNumericValue(edge.charAt(1)) - 10;
+            graph[sourceIndex][destIndex] = 1;
+            graph[destIndex][sourceIndex] = 1;
+        }
+        return graph;
     }
 
 
