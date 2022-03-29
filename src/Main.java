@@ -25,7 +25,7 @@
  *   if w is marked with 0
  *       dfs(w)*/
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
 	static int count = 0;
@@ -51,10 +51,6 @@ public class Main {
 			}
 		}
 
-//		for (int i = 0; i < visitedArray.length; i++) {
-//			System.out.println(vertArray[visitedArray[i]]);
-//		}
-
 		String result = new StringBuffer(visited).reverse().toString();
 		System.out.println(result);
 
@@ -78,6 +74,7 @@ public class Main {
 
 			}
 		}
+		boolean heck = false;
 		for (int j = 0; j < graf[0].length; j++) {
 			if (visitedArray[j] == 0) {
 				visited = visited + vertArray[index];
