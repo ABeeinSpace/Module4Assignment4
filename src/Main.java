@@ -25,6 +25,8 @@
  *   if w is marked with 0
  *       dfs(w)*/
 
+// I hate this programming language with every fiber of my being. Please save me from this torment
+
 import java.util.*;
 
 public class Main {
