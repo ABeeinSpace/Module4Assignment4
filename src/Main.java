@@ -51,8 +51,7 @@ public class Main {
 			}
 		}
 
-		String result = new StringBuffer(visited).reverse().toString();
-		System.out.println(result);
+		System.out.println(visited);
 
 	}
 
