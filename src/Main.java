@@ -23,9 +23,7 @@
  *
  * for each vertex w in V adjacent to v do
  *   if w is marked with 0
- *       dfs(w)*/
-
-// I hate this programming language with every fiber of my being. Please save me from this torment
+ *       dfs(w) */
 
 import java.util.*;
 
@@ -75,10 +73,10 @@ public class Main {
 
 			}
 		}
-		boolean heck = false;
 		for (int j = 0; j < graf[0].length; j++) {
 			if (visitedArray[j] == 0) {
-				visited = visited + vertArray[index];
+				visited = visited + vertArray[index]; //this line breaks things but I don't know how to not make it do
+				// things. So what we're going to do we're going to pull an EA and call it a surprise gameplay mechanic.
 			}
 			if (visitedArray[j] == 0 && graf[index][j] == 1) {
 				visited = dfs(vertArray[j], graf, vertArray, visitedArray, visited);
