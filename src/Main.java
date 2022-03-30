@@ -57,7 +57,7 @@ public class Main {
 	}
 
 	/*dfs()
-	 * Parameters: char v
+	 * Parameters: char v, byte[][] graf, char[] vertArray, int[] visitedArray, String visited
 	 * Returns: N/A (void) for now
 	 * Description: Recursively visits all unvisited vertices connected to a vertex v by a valid path and numbers them
 	 *  in the order they're encountered
