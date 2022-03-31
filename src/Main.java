@@ -57,7 +57,7 @@ public class Main {
 
 	/*dfs()
 	 * Parameters: char v, byte[][] graf, char[] vertArray, int[] visitedArray, String visited
-	 * Returns: N/A (void) for now
+	 * Returns: String
 	 * Description: Recursively visits all unvisited vertices connected to a vertex v by a valid path and numbers them
 	 *  in the order they're encountered
 	 * Special: Method is recursive*/
@@ -76,7 +76,8 @@ public class Main {
 		for (int j = 0; j < graf[0].length; j++) {
 			if (visitedArray[j] == 0) {
 				visited = visited + vertArray[index]; //this line breaks things but I don't know how to not make it do
-				// things. So what we're going to do we're going to pull an EA and call it a surprise gameplay mechanic.
+				// that. So what we're going to do is we're going to pull an EA and call it a surprise gameplay
+				// mechanic.
 			}
 			if (visitedArray[j] == 0 && graf[index][j] == 1) {
 				visited = dfs(vertArray[j], graf, vertArray, visitedArray, visited);
